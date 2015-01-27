@@ -1,0 +1,3 @@
+Concept to see in details:
+
+Class, methods, abstract,super
