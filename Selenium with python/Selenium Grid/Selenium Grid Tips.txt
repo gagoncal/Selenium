@@ -1,0 +1,51 @@
+Visual tool with GUI for easy use of Hub and add of nodes : VisGrid - for selenium grid attaching nodes to hub GUI
+
+
+
+Launch the hub through the command file:
+
+cd server folder
+java -jar selenium-server-standalone-2.39.0.jar -role hub (optional -port XXXX fro ex: 8888)
+
+Verify status of the hub :
+
+Navigate to page localhost:4444/grid
+-----------------------------------------------------------------------------------------------
+see full list of hub parameters:
+
+hub -h
+
+
+
+
+
+----------------------------------------------------------------------------------------------
+Configure and launch the hub with a json file:
+
+java -jar selenium-server-standalone-2.39.0.jar -role hub -hubconfig hubconfig.json
+
+
+---------------------------------------------------------------------------------------------
+CREATE shell script file to avoid retyping:
+$nano hub
+
+
+#!/bin/bash
+
+
+
+
+--------------------------------------------------------------------------------------------------
+
+Register the nodes:
+
+Registration as to take place on the node:
+
+
+java -jar selenium-server-standalone-2.39.0-jar -role node -hub http://localhost:4444/grid/register -browser "browserName =firefox, version=30.0, platform =MAC" -debug
+
+
+
+
+
+

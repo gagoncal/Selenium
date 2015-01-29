@@ -1,0 +1,30 @@
+In windows Nosetests get instaled in python27/scripts, to use command *nosetest , we have to be in the test folder of the working directory , but execute : 
+
+c:\python27\scripts\nosetests
+
+to avoid generating .pyc files , write nosetests --no-byte-compile
+to see what is running , nosetests --verbosity=2
+to tag tests :
+
+
+from nose.plugins.attrib import attr,
+before a test for example:
+
+@attr(priority="high")
+def....
+
+
+run all the tests with high priority:
+
+nosetests -a priority = "high"
+
+run a specific test : 
+
+nosetests --verbosity=2 --tests="searchProductTest.py"
+
+run a list of tests
+
+nosetests --verbosity=2 --tests="searchProductTest.py,....,...."
+
+run only tests that failed last test run :
+nosetests --verbosity=2 --failed
