@@ -45,6 +45,18 @@ Registration as to take place on the node:
 java -jar selenium-server-standalone-2.39.0-jar -role node -hub http://localhost:4444/grid/register -browser "browserName =firefox, version=30.0, platform =MAC" -debug
 
 
+or with json file : 
+
+
+java -jar selenium-server-standalone-2.39.0-jar -role node - nodeConfig nodes.json -debug
+
+
+-------------------------------------------------------------------------------------------------
+
+more info selenium.webdriver.common.desired_capabilities
+
+
+
 
 
 
